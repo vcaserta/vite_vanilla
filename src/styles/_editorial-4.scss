@@ -1,0 +1,68 @@
+.edit-4-item {
+  @apply ml-[117px] w-1/3 cursor-default;
+
+  &__tit {
+    @apply text-[60px] font-bold leading-[60px] transition-all duration-300 ease-linear origin-left scale-100;
+  }
+
+  &__wrp-t {
+    @apply  flex flex-col transition-all duration-300 ease-linear items-start; // h-[60px]
+  }
+
+  &__link {
+    @apply underline opacity-0 transition-all duration-300 ease-linear scale-0 will-change-transform;
+  }
+
+  &__bg {
+    @apply pointer-events-none absolute top-0 bottom-0 left-0 right-0 z-[-1] h-full w-full scale-[1.2] bg-cover bg-center opacity-0 transition-all duration-300 ease-linear will-change-transform;
+  }
+
+  &__cnt {
+    @apply pointer-events-none absolute top-1/2 left-[43%] flex -translate-y-1/2 items-end opacity-0 transition-all duration-300 ease-linear scale-75 will-change-transform;
+  }
+
+  &__wrp-img {
+    @apply pointer-events-none h-[310px] w-[310px] overflow-hidden;
+  }
+  &__img {
+    @apply h-full w-full object-cover;
+  }
+  &__prd-t {
+    @apply flex flex-col pl-[24px] pb-[24px];
+  }
+  &__prd-tit {
+    @apply mb-[7px] text-[30px] font-bold leading-[35px] will-change-transform;
+  }
+  &__prd-b {
+    @apply mt-[16px] h-[58px] w-[184px] bg-black text-white;
+  }
+}
+
+.edit-4-item {
+  &.expanded {
+    @apply w-full;
+
+    .edit-4-item__wrp-t {
+      @apply my-[30px];
+    }
+
+    .edit-4-item__bg {
+      @apply opacity-100 scale-100;
+    }
+    .edit-4-item__cnt {
+      @apply opacity-100 pointer-events-auto scale-100;
+
+    }
+    .edit-4-item__link {
+      @apply opacity-100 scale-100
+    }
+  }
+  &.resized {
+    .edit-4-item__tit {
+      @apply scale-[.85] text-[#758791] opacity-30 origin-left;
+    }
+    .edit-4-item__link {
+      @apply text-[#758791]
+    }
+  }
+}
