@@ -6,7 +6,7 @@
     @apply h-full w-full object-cover;
   }
   &__cnt {
-    @apply relative top-[-22px] flex flex-col items-center px-[60px] text-center transition opacity-100 duration-300 invisible;
+    @apply relative top-[-80px] flex flex-col items-center px-[60px] text-center transition opacity-100 duration-300 invisible;
   }
   &__ttl {
     @apply text-[35px] leading-[36px] font-bold text-[#121721] mb-3;
@@ -29,8 +29,11 @@
 }
 
 #edit4Swiper {
-  .swiper-slide-prev .edit-1-prd-item__w-img{
-    aspect-ratio: 556/748  !important;
+  // .swiper-slide-prev .edit-1-prd-item__w-img{
+  //   aspect-ratio: 556/748  !important;
+  // }
+  .swiper-slide-active {
+    scale: .9;
   }
   .swiper-slide-active .edit-1-prd-item__cnt {
     visibility: visible !important;

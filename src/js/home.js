@@ -6,9 +6,7 @@ import { gsap } from 'gsap';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
-import Swiper, {
- Autoplay, EffectCreative, EffectFade, FreeMode 
-} from 'swiper';
+import Swiper, { Autoplay, EffectCreative, EffectFade, FreeMode } from 'swiper';
 
 ScrollMagicPluginGsap(ScrollMagic, gsap);
 
@@ -158,14 +156,15 @@ $(() => {
     effect: 'creative',
     initialSlide: 1,
     nested: true,
+    autoHeight: true,
     creativeEffect: {
       prev: {
         // shadow: true,
-        translate: ['-100%', 0, 100],
+        translate: ['-90%', 0, 100],
       },
       next: {
         // shadow: true,
-        translate: ['100%', 0, -500],
+        translate: ['140%', 0, -500],
       },
     },
   };
