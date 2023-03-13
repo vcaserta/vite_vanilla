@@ -1,0 +1,32 @@
+.edit-2-pin {
+  @apply absolute flex h-[54px] w-[54px]  items-center justify-center rounded-full bg-black/40;
+  &.active {
+    .edit-2-pin__in {
+      @apply h-full w-full
+    }
+  }
+  &__in {
+    @apply h-[26px] w-[26px] rounded-full bg-black transition-all;
+  }
+}
+.edit-2-prd-pin {
+  @apply flex items-end gap-[30px];
+  &__w-img {
+    @apply aspect-square min-w-[250px] flex-1 overflow-hidden;
+  }
+  &__img {
+    @apply h-full w-full object-cover;
+  }
+  &__cnt {
+    @apply flex flex-1 flex-col;
+  }
+  &__ttl {
+    @apply mb-2 text-[29px] font-bold leading-[36px];
+  }
+  &__prc {
+    @apply mb-4;
+  }
+  &__btn {
+    @apply flex h-[58px] w-[183px] cursor-pointer items-center justify-center bg-[#121721] text-white;
+  }
+}
