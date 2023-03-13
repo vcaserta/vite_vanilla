@@ -5,6 +5,7 @@ $(() => {
   const swiper = new Swiper('#edit2Swiper', {
     modules: [EffectFade],
     slidesPerView: 1,
+    allowTouchMove: false,
     effect: 'fade',
     fadeEffect: {
       crossFade: true,
