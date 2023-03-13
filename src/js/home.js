@@ -6,7 +6,9 @@ import { gsap } from 'gsap';
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
-import Swiper, { Autoplay, EffectCreative } from 'swiper';
+import Swiper, {
+ Autoplay, EffectCreative, EffectFade, FreeMode 
+} from 'swiper';
 
 ScrollMagicPluginGsap(ScrollMagic, gsap);
 
@@ -148,12 +150,14 @@ $(() => {
   //   .addTo(controller);
   // End Carousel Animation
 
-  const swiper2 = new Swiper('#edit1Swiper', {
+  const carouselOptions = {
     modules: [EffectCreative],
     slidesPerView: 2.5,
     grabCursor: true,
     centeredSlides: true,
     effect: 'creative',
+    initialSlide: 1,
+    nested: true,
     creativeEffect: {
       prev: {
         // shadow: true,
@@ -164,5 +168,36 @@ $(() => {
         translate: ['100%', 0, -500],
       },
     },
+  };
+
+  const swiper4 = new Swiper('#edit4Swiper', carouselOptions);
+  const swiper5 = new Swiper('#edit5Swiper', carouselOptions);
+  const swiper6 = new Swiper('#edit6Swiper', carouselOptions);
+
+  const swiperMain = new Swiper('#edit1Main', {
+    modules: [EffectFade],
+    slidesPerView: 1,
+    allowTouchMove: false,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+  });
+
+  const swiper1 = new Swiper('#edit1Swiper', {
+    modules: [Autoplay, FreeMode],
+    slidesPerView: 'auto',
+    loop: true,
+    autoplay: {
+      delay: 0,
+      pauseOnMouseEnter: true,
+    },
+    // grabCursor: true,
+    speed: 5000,
+    freeMode: true,
+    centeredSlides: true,
+  });
+  swiper1.on('slideChange', () => {
+    console.log('change');
   });
 });
