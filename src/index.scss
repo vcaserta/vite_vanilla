@@ -1,0 +1,91 @@
+@import 'swiper/css/bundle';
+@import '/src/styles/_font';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Mutka';
+	src: url('/assets/fonts/Mutka-Regular.ttf') format('ttf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Mutka';
+	src: url('/assets/fonts/Mutka-Medium.ttf') format('ttf');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Mutka';
+	src: url('/assets/fonts/Mutka-SemiBold.ttf') format('ttf');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Mutka';
+	src: url('/assets/fonts/Mutka-Bold.ttf') format('ttf');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+.scrollContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.spacer {
+  text-align: center;
+  min-height: 100px;
+}
+.spacer.s0 {
+  min-height: 1px;
+}
+.spacer.s1 {
+  min-height: 100px;
+}
+.spacer.s2 {
+  min-height: 200px;
+}
+.spacer.s3 {
+  min-height: 300px;
+}
+.spacer.s4 {
+  min-height: 400px;
+}
+.spacer.s5 {
+  min-height: 500px;
+}
+.spacer.s6 {
+  min-height: 600px;
+}
+.spacer.s7 {
+  min-height: 700px;
+}
+.spacer.s8 {
+  min-height: 800px;
+}
+.spacer.s9 {
+  min-height: 900px;
+}
+.spacer.s10 {
+  min-height: 1000px;
+}
+.spacer.s_viewport {
+  min-height: 100%;
+}
+
+
+@import '/src/styles/_editorial-4.scss';
+@import '/src/styles/hero.scss';
