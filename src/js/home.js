@@ -14,11 +14,11 @@ $(() => {
   const swiper = new Swiper('#heroSwiper', {
     modules: [Autoplay],
     loop: true,
-    // autoplay: {
-    //   delay: 3500,
-    //   disableOnInteraction: true,
-    //   pauseOnMouseEnter: true,
-    // },
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: true,
+      pauseOnMouseEnter: true,
+    },
     observer: true,
     observeParents: true,
     speed: 500,
@@ -73,10 +73,10 @@ $(() => {
     backgroundColor: 'black',
   });
 
-  const twennScrollCarousel = gsap.to('#hero-carousel .swiper-wrapper', {
-    duration: 2,
-    transform: `translate3d(-${window.innerWidth - 303}px, 0, 0)`,
-  });
+  // const twennScrollCarousel = gsap.to('#hero-carousel .swiper-wrapper', {
+  //   duration: 2,
+  //   transform: `translate3d(-${window.innerWidth - 303}px, 0, 0)`,
+  // });
 
   new ScrollMagic.Scene({
     // reverse: false,
@@ -131,21 +131,21 @@ $(() => {
   new ScrollMagic.Scene({
     triggerElement: '#trigger1',
     triggerHook: 0,
-    duration: 700,
+    duration: 300,
   })
     .setPin('#hero-carousel')
     .addIndicators()
     .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: '#trigger1',
-    triggerHook: 0,
-    offset: 200,
-    duration: 500,
-  })
-    .setTween(twennScrollCarousel)
-    .addIndicators()
-    .addTo(controller);
+  // new ScrollMagic.Scene({
+  //   triggerElement: '#trigger1',
+  //   triggerHook: 0,
+  //   offset: 200,
+  //   duration: 500,
+  // })
+  //   .setTween(twennScrollCarousel)
+  //   .addIndicators()
+  //   .addTo(controller);
   // End Carousel Animation
 
   const swiper2 = new Swiper('#edit1Swiper', {
@@ -156,11 +156,11 @@ $(() => {
     effect: 'creative',
     creativeEffect: {
       prev: {
-        shadow: true,
+        // shadow: true,
         translate: ['-100%', 0, 100],
       },
       next: {
-        shadow: true,
+        // shadow: true,
         translate: ['100%', 0, -500],
       },
     },
