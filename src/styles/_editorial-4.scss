@@ -1,8 +1,8 @@
 .edit-4-item {
-  @apply ml-[117px] w-1/3 cursor-default;
+  @apply ml-[117px] w-1/5 cursor-default;
 
   &__tit {
-    @apply text-[60px] font-bold leading-[60px] transition-all duration-300 ease-linear origin-left scale-100;
+    @apply text-[60px] font-bold leading-[60px] transition-all duration-300 ease-linear origin-left scale-100 will-change-transform;
   }
 
   &__wrp-t {

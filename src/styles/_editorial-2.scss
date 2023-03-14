@@ -2,7 +2,7 @@
   @apply absolute flex h-[54px] w-[54px]  items-center justify-center rounded-full bg-black/40;
   &.active {
     .edit-2-pin__in {
-      @apply h-full w-full
+      @apply h-full w-full;
     }
   }
   &__in {
@@ -28,5 +28,22 @@
   }
   &__btn {
     @apply flex h-[58px] w-[183px] cursor-pointer items-center justify-center bg-[#121721] text-white;
+  }
+}
+
+.marq-edit-2 {
+  @apply relative w-[53%] flex overflow-hidden select-none gap-[10px];
+  &__cnt {
+    @apply shrink-0 flex justify-around gap-[10px] min-w-full whitespace-nowrap text-[55px] font-bold;
+    animation: scroll 10s linear infinite;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 10px));
   }
 }
