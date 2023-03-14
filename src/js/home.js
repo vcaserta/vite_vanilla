@@ -7,6 +7,9 @@ import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 import Swiper, { Autoplay, EffectCreative, EffectFade, FreeMode } from 'swiper';
+import 'slick-carousel';
+// eslint-disable-next-line no-multi-assign
+window.$ = window.jQuery = $;
 
 ScrollMagicPluginGsap(ScrollMagic, gsap);
 
@@ -180,21 +183,39 @@ $(() => {
       crossFade: true,
     },
   });
+  // const swiper1 = new Swiper('#edit1Swiper', {
+  //   modules: [Autoplay, FreeMode],
+  //   slidesPerView: 'auto',
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 0,
+  //     pauseOnMouseEnter: true,
+  //     disableOnInteraction: true,
+  //   },
+  //   grabCursor: true,
+  //   speed: 5000,
+  //   freeMode: true,
+  //   // centeredSlides: true,
+  // });
+  // swiper1.on('slideChange', () => {
+  //   console.log('change');
+  // });
 
-  const swiper1 = new Swiper('#edit1Swiper', {
-    modules: [Autoplay, FreeMode],
-    slidesPerView: 'auto',
-    loop: true,
-    autoplay: {
-      delay: 0,
-      pauseOnMouseEnter: true,
-    },
-    // grabCursor: true,
-    speed: 5000,
-    freeMode: true,
-    centeredSlides: true,
+  $('#edit1Swiper').slick({
+    speed: 9000,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+    infinite: true,
+    centerMode: true,
+    // centerPadding: 0,
+    // pauseOnHover: true,
   });
-  swiper1.on('slideChange', () => {
-    console.log('change');
+  $('#edit1Swiper').on('mouseenter', function () {
+    console.log('pause');
+    // $(this).css('transition');
   });
 });
