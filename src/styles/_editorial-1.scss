@@ -16,21 +16,44 @@
     @apply h-[60px] w-[168px] border border-[#121721] bg-white text-[#121721] mt-3;
   }
 }
-#edit1Slick {
-  .slick-slide {
+// #edit1Slick {
+//   .slick-track.triggerAnimation {
+//     transition: transform 9000ms linear 0s !important;
+//   }
+//   .slick-slide {
+//     color: rgba(0, 0, 0, 0.4);
+//     font-size: 184px;
+//     font-weight: 800;
+//     line-height: 160px;
+//     margin: 0 50px;
+//     position: relative;
+//     &:before {
+//       content: '.';
+//       position: absolute;
+//       left: -70px;
+//       bottom: 40px;
+//     }
+//     &.slick-active, &.slick-current {
+//       color: black;
+//     }      
+//   }
+// }
+
+#edit1Swiper {
+  .swiper-slide {
     color: rgba(0, 0, 0, 0.4);
-    font-size: 184px;
     font-weight: 800;
     line-height: 160px;
     margin: 0 50px;
     position: relative;
+    width: auto !important;
     &:before {
       content: '.';
       position: absolute;
       left: -70px;
       bottom: 40px;
     }
-    &.slick-active, &.slick-current {
+    &.slide-active {
       color: black;
     }      
   }
