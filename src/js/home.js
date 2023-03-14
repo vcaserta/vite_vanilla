@@ -182,6 +182,7 @@ $(() => {
     fadeEffect: {
       crossFade: true,
     },
+    loop: true,
   });
   // const swiper1 = new Swiper('#edit1Swiper', {
   //   modules: [Autoplay, FreeMode],
@@ -218,7 +219,7 @@ $(() => {
     console.log('pause');
     // $(this).css('transition');
   });
-  $slickCarousel.on('afterChange', function () {
+  $slickCarousel.on('afterChange', function (slick, currentSlide) {
     swiperMain.slideNext();
   });
 });
