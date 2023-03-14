@@ -201,7 +201,7 @@ $(() => {
   //   console.log('change');
   // });
 
-  $('#edit1Swiper').slick({
+  $('#edit1Slick').slick({
     speed: 9000,
     autoplay: true,
     autoplaySpeed: 0,
@@ -214,7 +214,7 @@ $(() => {
     // centerPadding: 0,
     // pauseOnHover: true,
   });
-  $('#edit1Swiper').on('mouseenter', function () {
+  $('#edit1Slick').on('mouseenter', function () {
     console.log('pause');
     // $(this).css('transition');
   });
