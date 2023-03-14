@@ -31,7 +31,7 @@
   }
 }
 
-.marquee {
+.marq-edit-2 {
   @apply relative w-[53%] flex overflow-hidden select-none gap-[10px];
   &__cnt {
     @apply shrink-0 flex justify-around gap-[10px] min-w-full whitespace-nowrap text-[55px] font-bold;
