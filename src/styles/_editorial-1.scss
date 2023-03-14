@@ -1,12 +1,13 @@
 .edit-1-prd-item {
   &__w-img {
     @apply aspect-[424/600] overflow-hidden;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
   }
   &__img {
     @apply h-full w-full object-cover;
   }
   &__cnt {
-    @apply relative top-[-80px] flex flex-col items-center px-[60px] text-center transition opacity-100 duration-300 invisible;
+    @apply relative mt-[-20px] flex flex-col items-center px-[60px] text-center transition opacity-0 duration-500;
   }
   &__ttl {
     @apply text-[35px] leading-[36px] font-bold text-[#121721] mb-3;
@@ -28,26 +29,8 @@
   }
 }
 
-#edit4Swiper {
-  // .swiper-slide-prev .edit-1-prd-item__w-img{
-  //   aspect-ratio: 556/748  !important;
-  // }
-  .swiper-slide-active {
-    scale: .9;
+#edit1Main {
+  .swiper-inner .swiper-slide-active .edit-1-prd-item__cnt {
+    @apply opacity-100;
   }
-  .swiper-slide-active .edit-1-prd-item__cnt {
-    visibility: visible !important;
-  }
-  // .swiper-slide {
-  //   overflow: visible;
-  //   height: auto;
-  // }
-  // .edit-1-prd-item {
-  //   position: relative;
-  //   &__cnt {
-  //     position: absolute;
-  //     top: unset;
-  //     bottom: -12%;
-  //   }
-  // }
 }

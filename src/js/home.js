@@ -150,28 +150,26 @@ $(() => {
 
   const carouselOptions = {
     modules: [EffectCreative],
-    slidesPerView: 2.5,
-    grabCursor: true,
-    centeredSlides: true,
+    slidesPerView: 2.2,
     effect: 'creative',
-    initialSlide: 1,
+    centeredSlides: true,
     nested: true,
-    autoHeight: true,
+    loop: true,
     creativeEffect: {
+      limitProgress: 10,
+      progressMultiplier: 2,
       prev: {
-        // shadow: true,
-        translate: ['-90%', 0, 100],
+        translate: ['-50%', '1.5%', 120],
       },
       next: {
-        // shadow: true,
-        translate: ['140%', 0, -500],
+        translate: ['68%', '-1%', -250],
       },
     },
   };
 
-  const swiper4 = new Swiper('#edit4Swiper', carouselOptions);
-  const swiper5 = new Swiper('#edit5Swiper', carouselOptions);
-  const swiper6 = new Swiper('#edit6Swiper', carouselOptions);
+  const swiper4 = new Swiper('#edit1SwiperInn1', carouselOptions);
+  const swiper5 = new Swiper('#edit1SwiperInn2', carouselOptions);
+  const swiper6 = new Swiper('#edit1SwiperInn3', carouselOptions);
 
   const swiperMain = new Swiper('#edit1Main', {
     modules: [EffectFade],
