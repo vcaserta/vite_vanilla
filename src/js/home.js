@@ -200,8 +200,8 @@ $(() => {
   // swiper1.on('slideChange', () => {
   //   console.log('change');
   // });
-
-  $('#edit1Slick').slick({
+  const $slickCarousel = $('#edit1Slick');
+  $slickCarousel.slick({
     speed: 9000,
     autoplay: true,
     autoplaySpeed: 0,
@@ -214,8 +214,11 @@ $(() => {
     // centerPadding: 0,
     // pauseOnHover: true,
   });
-  $('#edit1Slick').on('mouseenter', function () {
+  $slickCarousel.on('mouseenter', function () {
     console.log('pause');
     // $(this).css('transition');
+  });
+  $slickCarousel.on('afterChange', function () {
+    swiperMain.slideNext();
   });
 });
