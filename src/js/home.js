@@ -30,25 +30,23 @@ $(() => {
 
   const controller = new ScrollMagic.Controller({ container: '#main' });
 
-  // Carousel Animation
-  // const spvI = 1;
-  // const spvF = 1.338;
-  // const sbI = 0;
-  // const sbF = 60;
-  // const sobI = 0;
-  // const sobF = 60;
+  const width = window.innerWidth;
+  const isMobile = width < 1024;
+
   const tweenSlide = gsap.to('#hero-carousel .js-hero-slide', {
     duration: 2,
-    height: '70vh',
-    width: 'calc(100% - 183px - 60px - 60px)',
+    height: isMobile ? '63vh' : '76vh',
+    width: isMobile
+      ? 'calc(100% - 30px - 24px - 24px)'
+      : 'calc(100% - 132px - 40px - 40px)',
+    paddingTop: isMobile ? '75px' : '0px',
     ease: 'none',
   });
 
   tweenSlide.eventCallback('onUpdate', () => {
     const progress = tweenSlide.progress();
-    // const spv = spvI + (spvF - spvI) * progress;
-    // const sob = 60 * progress;
-    const sb = 60 * progress;
+    const space = isMobile ? 24 : 40;
+    const sb = space * progress;
     swiper.params.spaceBetween = sb;
     swiper.params.slidesOffsetBefore = sb;
     swiper.update();
@@ -56,8 +54,9 @@ $(() => {
 
   const tweenBlockText = gsap.to('#hero-carousel .js-hero-block-text', {
     duration: 2,
-    bottom: '-110px',
+    bottom: isMobile ? '-252px' : '-110px',
     padding: 0,
+    ease: 'none',
   });
 
   const tweenText = gsap.to('#hero-carousel .js-hero-text', {
@@ -67,25 +66,31 @@ $(() => {
 
   const tweenTitle = gsap.to('#hero-carousel .js-hero-text-title', {
     duration: 2,
-    transform: 'scale(0.85)',
+    transform: isMobile ? 'scale(0.8)' : 'translateY(22px) scale(1.55)',
     transformOrigin: 'left',
   });
+
+  const tweenPara = gsap.to('#hero-carousel .js-hero-para', {
+    duration: 2,
+    transform: isMobile ? 'translateY(-16px) scale(0.80)' : 'translateY(38px)',
+    lineHeight: isMobile ? '24px' : '30px',
+    transformOrigin: 'left',
+  });
+
   const tweenButton = gsap.to('#hero-carousel .js-hero-button', {
     duration: 2,
     color: 'white',
     backgroundColor: 'black',
+    transform: isMobile ? 'translateY(-30px)' : 'translateY(30px)',
   });
 
-  // const twennScrollCarousel = gsap.to('#hero-carousel .swiper-wrapper', {
-  //   duration: 2,
-  //   transform: `translate3d(-${window.innerWidth - 303}px, 0, 0)`,
-  // });
+  // SCENE DESKTOP
 
   new ScrollMagic.Scene({
     // reverse: false,
     triggerElement: '#trigger1',
     triggerHook: 0,
-    duration: 200,
+    duration: isMobile ? 50 : 200,
   })
     .setTween(tweenSlide)
     .addIndicators()
@@ -95,7 +100,7 @@ $(() => {
     // reverse: false,
     triggerElement: '#trigger1',
     triggerHook: 0,
-    duration: 200,
+    duration: isMobile ? 50 : 200,
   })
     .setTween(tweenText)
     .addIndicators()
@@ -105,7 +110,7 @@ $(() => {
     // reverse: false,
     triggerElement: '#trigger1',
     triggerHook: 0,
-    duration: 200,
+    duration: isMobile ? 50 : 200,
   })
     .setTween(tweenTitle)
     .addIndicators()
@@ -115,7 +120,7 @@ $(() => {
     // reverse: false,
     triggerElement: '#trigger1',
     triggerHook: 0,
-    duration: 200,
+    duration: isMobile ? 50 : 200,
   })
     .setTween(tweenButton)
     .addIndicators()
@@ -125,7 +130,17 @@ $(() => {
     // reverse: false,
     triggerElement: '#trigger1',
     triggerHook: 0,
-    duration: 200,
+    duration: isMobile ? 50 : 200,
+  })
+    .setTween(tweenPara)
+    .addIndicators()
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    // reverse: false,
+    triggerElement: '#trigger1',
+    triggerHook: 0,
+    duration: isMobile ? 50 : 200,
   })
     .setTween(tweenBlockText)
     .addIndicators()
@@ -134,20 +149,11 @@ $(() => {
   new ScrollMagic.Scene({
     triggerElement: '#trigger1',
     triggerHook: 0,
-    duration: 300,
+    duration: isMobile ? 70 : 200,
   })
     .setPin('#hero-carousel')
     .addIndicators()
     .addTo(controller);
 
-  // new ScrollMagic.Scene({
-  //   triggerElement: '#trigger1',
-  //   triggerHook: 0,
-  //   offset: 200,
-  //   duration: 500,
-  // })
-  //   .setTween(twennScrollCarousel)
-  //   .addIndicators()
-  //   .addTo(controller);
-  // End Carousel Animation
+  // window.addEventListener('resize', handleResize);
 });

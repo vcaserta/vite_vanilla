@@ -8,37 +8,36 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'Mutka';
-	src: url('/assets/fonts/Mutka-Regular.ttf') format('ttf');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'Mutka';
+  src: url('/assets/fonts/Mutka-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Mutka';
-	src: url('/assets/fonts/Mutka-Medium.ttf') format('ttf');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'Mutka';
+  src: url('/assets/fonts/Mutka-Medium.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Mutka';
-	src: url('/assets/fonts/Mutka-SemiBold.ttf') format('ttf');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'Mutka';
+  src: url('/assets/fonts/Mutka-SemiBold.ttf') format('ttf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: 'Mutka';
-	src: url('/assets/fonts/Mutka-Bold.ttf') format('ttf');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'Mutka';
+  src: url('/assets/fonts/Mutka-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
-
 
 .scrollContainer {
   overflow-y: scroll;
@@ -88,8 +87,18 @@
   min-height: 100%;
 }
 
-
 @import '/src/styles/_editorial-4.scss';
 @import '/src/styles/hero.scss';
 @import '/src/styles/_editorial-1.scss';
 @import '/src/styles/_editorial-2.scss';
+
+header {
+  @media screen and (min-width: 1024px) {
+    background: linear-gradient(
+      180deg,
+      rgba(18, 23, 33, 0.5) 0%,
+      rgba(0, 0, 0, 0.05) 91.67%
+    );
+    box-shadow: none;
+  }
+}

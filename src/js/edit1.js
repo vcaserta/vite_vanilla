@@ -61,7 +61,7 @@ $(() => {
 
   const carouselOptions = {
     modules: [EffectCreative],
-    slidesPerView: 2.2,
+    slidesPerView: 1.32,
     effect: 'creative',
     centeredSlides: true,
     nested: true,
@@ -70,10 +70,25 @@ $(() => {
       limitProgress: 10,
       progressMultiplier: 2,
       prev: {
-        translate: ['-50%', '1.5%', 120],
+        translate: ['-48.6%', '2.1%', 95],
       },
       next: {
-        translate: ['68%', '-1%', -250],
+        translate: ['64.3%', '-1%', -220],
+      },
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 2.5,
+        creativeEffect: {
+          limitProgress: 10,
+          progressMultiplier: 2,
+          prev: {
+            translate: ['-46.6%', '3.5%', 130],
+          },
+          next: {
+            translate: ['64%', '-1%', -250],
+          },
+        },
       },
     },
   };

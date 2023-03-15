@@ -1,86 +1,42 @@
 .edit-1-prd-item {
+  @apply text-white lg:text-[#121721];
   &__w-img {
-    @apply aspect-[424/600] overflow-hidden;
+    @apply aspect-[294/417] overflow-hidden lg:aspect-[394/557];
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
   }
   &__img {
     @apply h-full w-full object-cover;
   }
   &__cnt {
-    @apply relative mt-[-20px] flex flex-col items-center px-[60px] text-center opacity-0 transition duration-500;
+    @apply mt-[15px] flex flex-col items-center px-[12px] text-center opacity-0 invisible transition duration-500 lg:mt-[22px];
   }
   &__ttl {
-    @apply mb-3 text-[35px] font-bold leading-[36px] text-[#121721];
+    @apply mb-[8px] text-[14px] leading-[16px] lg:mb-[2px] lg:text-[32px] lg:leading-[40px];
+  }
+  &__prc {
+    @apply text-[16px] font-bold lg:text-[24px];
   }
   &__btn {
-    @apply mt-3 h-[60px] w-[168px] border border-[#121721] bg-white text-[#121721];
+    @apply mt-3 h-[40px] w-[165px] border border-[#121721] bg-white text-[14px] font-semibold text-[#121721] lg:h-[58px] lg:w-[225px] lg:text-[16px];
   }
 }
-// #edit1Slick {
-//   .slick-track.triggerAnimation {
-//     transition: transform 9000ms linear 0s !important;
-//   }
-//   .slick-slide {
-//     color: rgba(0, 0, 0, 0.4);
-//     font-size: 184px;
-//     font-weight: 800;
-//     line-height: 160px;
-//     margin: 0 50px;
-//     position: relative;
-//     &:before {
-//       content: '.';
-//       position: absolute;
-//       left: -70px;
-//       bottom: 40px;
-//     }
-//     &.slick-active, &.slick-current {
-//       color: black;
-//     }
-//   }
-// }
-
-// #edit1Swiper {
-//   .swiper-slide {
-//     color: rgba(0, 0, 0, 0.4);
-//     font-weight: 800;
-//     line-height: 160px;
-//     margin: 0 50px;
-//     position: relative;
-//     width: auto !important;
-//     &:before {
-//       content: '.';
-//       position: absolute;
-//       left: -70px;
-//       bottom: 40px;
-//     }
-//     &.slide-active {
-//       color: black;
-//     }
-//   }
-// }
 
 #edit1Main {
   .swiper-inner .swiper-slide-active .edit-1-prd-item__cnt {
-    @apply opacity-100;
+    @apply opacity-100 visible;
   }
 }
 
 .slide {
-  color: rgba(0, 0, 0, 0.4);
-  font-weight: 800;
-  font-size: 140px;
-  line-height: 160px;
-  margin: 0 50px;
-  position: relative;
+  @apply relative mx-[20px] text-[40px] font-bold leading-[50px] text-black/40 lg:mx-[50px] lg:text-[140px] lg:leading-[160px];
   width: auto !important;
-  cursor: pointer!important;
+  cursor: pointer !important;
   &:before {
     content: '.';
     position: absolute;
-    left: -70px;
-    bottom: 40px;
+    @apply left-[-25px] bottom-[10px] lg:left-[-70px] lg:bottom-[40px];
   }
   &.slide-active {
-    color: black;
+    @apply text-black;
   }
 }
