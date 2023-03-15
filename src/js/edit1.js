@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import $ from 'jquery';
 import Flickity from 'flickity';
-import 'flickity/dist/flickity.min.css';
+import 'flickity/css/flickity.css';
 
 import Swiper, { EffectCreative, EffectFade } from 'swiper';
 // import 'slick-carousel';
