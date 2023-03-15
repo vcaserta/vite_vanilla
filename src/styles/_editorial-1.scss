@@ -7,13 +7,13 @@
     @apply h-full w-full object-cover;
   }
   &__cnt {
-    @apply relative mt-[-20px] flex flex-col items-center px-[60px] text-center transition opacity-0 duration-500;
+    @apply relative mt-[-20px] flex flex-col items-center px-[60px] text-center opacity-0 transition duration-500;
   }
   &__ttl {
-    @apply text-[35px] leading-[36px] font-bold text-[#121721] mb-3;
+    @apply mb-3 text-[35px] font-bold leading-[36px] text-[#121721];
   }
   &__btn {
-    @apply h-[60px] w-[168px] border border-[#121721] bg-white text-[#121721] mt-3;
+    @apply mt-3 h-[60px] w-[168px] border border-[#121721] bg-white text-[#121721];
   }
 }
 // #edit1Slick {
@@ -35,32 +35,52 @@
 //     }
 //     &.slick-active, &.slick-current {
 //       color: black;
-//     }      
+//     }
 //   }
 // }
 
-#edit1Swiper {
-  .swiper-slide {
-    color: rgba(0, 0, 0, 0.4);
-    font-weight: 800;
-    line-height: 160px;
-    margin: 0 50px;
-    position: relative;
-    width: auto !important;
-    &:before {
-      content: '.';
-      position: absolute;
-      left: -70px;
-      bottom: 40px;
-    }
-    &.slide-active {
-      color: black;
-    }      
-  }
-}
+// #edit1Swiper {
+//   .swiper-slide {
+//     color: rgba(0, 0, 0, 0.4);
+//     font-weight: 800;
+//     line-height: 160px;
+//     margin: 0 50px;
+//     position: relative;
+//     width: auto !important;
+//     &:before {
+//       content: '.';
+//       position: absolute;
+//       left: -70px;
+//       bottom: 40px;
+//     }
+//     &.slide-active {
+//       color: black;
+//     }
+//   }
+// }
 
 #edit1Main {
   .swiper-inner .swiper-slide-active .edit-1-prd-item__cnt {
     @apply opacity-100;
+  }
+}
+
+.slide {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 800;
+  font-size: 140px;
+  line-height: 160px;
+  margin: 0 50px;
+  position: relative;
+  width: auto !important;
+  cursor: pointer!important;
+  &:before {
+    content: '.';
+    position: absolute;
+    left: -70px;
+    bottom: 40px;
+  }
+  &.slide-active {
+    color: black;
   }
 }
