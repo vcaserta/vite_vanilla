@@ -94,14 +94,92 @@
 @import '/src/styles/editorial-5.scss';
 @import '/src/styles/animations.scss';
 
-header {
+.header {
+  @apply fixed left-0 right-0 top-0 z-[100] flex h-[48px] w-full flex-col justify-center  bg-transparent px-[24px] text-white lg:top-[24px] lg:h-[112px] lg:justify-start lg:p-0;
+  @apply overflow-hidden lg:pt-[25px];
+  transition: background 300ms ease-in-out, padding 300ms ease-in-out, height 300ms ease-in-out;
   @media screen and (min-width: 1024px) {
-    background: linear-gradient(
-      180deg,
-      rgba(18, 23, 33, 0.5) 0%,
-      rgba(0, 0, 0, 0.05) 91.67%
-    );
+    // &:before {
+    //   position: absolute;
+    //   content: '';
+    //   left: 0;
+    //   top: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   background: linear-gradient(
+    //     180deg,
+    //     rgba(23, 22, 20, 0.65) 0%,
+    //     rgba(23, 22, 20, 0) 100%
+    //   );
+    //   transition: all 200ms ease-in-out;
+    // }
     box-shadow: none;
+    &:hover {
+      background-color: white !important;
+      color: #171614 !important;
+      &:before {
+        top: -100% !important;
+      }
+      .header__icn-src:before {
+        background-color: #171614 !important;
+      }
+      .header__img--w {
+        opacity: 0 !important;
+      }
+      .header__img--b {
+        opacity: 100 !important;
+      }
+    }
+  }
+
+  &__logo {
+    @apply z-10 min-w-[120px] max-w-[120px] h-[41px] relative lg:top-[-4px] scale-100;
+    transition: transform 300ms ease-in-out, scale 300ms ease-in-out;
+  }
+  &__img {
+    @apply w-full h-full absolute inset-0;
+    transition: opacity 300ms ease-in-out;
+    &--b {
+      @apply opacity-0
+    }
+    &--w {
+      @apply opacity-100
+    }
+  }
+
+  &__ctn {
+    @apply flex text-sm items-end z-10 w-full lg:px-[48px];
+  }
+
+  &__nav {
+    @apply flex justify-between w-full pl-[40px];
+    transition: padding 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  &__menu {
+    @apply hidden lg:flex gap-[23px] absolute left-1/2 -translate-x-1/2;
+  }
+
+  &__icn {
+    @apply flex gap-[24px] items-center;
+  }
+
+  &__m-cat {
+    @apply hidden lg:flex gap-[26px];
+  }
+
+  &__icn-src {
+    @apply w-[128px] flex items-center justify-end relative;
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -4px;
+      height: 1px;
+      width: 100%;
+      background: white;
+      transition: background 300ms ease-in-out;
+    }
   }
 }
 

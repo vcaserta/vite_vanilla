@@ -11,16 +11,24 @@
 <body class="body">
   <!-- Strip Banner -->
   <div
-    class="h-[24px] hidden fixed left-0 right-0 bg-[#121721] lg:flex items-center justify-center w-full z-[100] text-white font-medium text-[10px]">
-    Reso
-    sempre gratuito</div>
+    class="h-[24px] px-[48px] fixed left-0 right-0 bg-[#E7E7E7] lg:flex items-center justify-between w-full z-[100] text-[#727072] font-medium text-[10px]">
+    <div class="hidden lg:flex items-center">
+      <span class="mr-[24px]">Call Us</span>
+      <span>Boutiques</span>
+    </div>
+    <div class="text-[#171614]">Return always free</div>
+    <div class="hidden lg:flex items-center">Delivery: UK - English </div>
+  </div>
   <!-- End Strip Banner -->
+
   <!-- Header -->
   <header
-    class="js-header bg-transparent text-white h-[48px] lg:h-[136px] px-[24px] lg:px-[60px] flex flex-col fixed left-0 right-0 w-full top-0 lg:top-[24px] z-[100] justify-center lg:justify-start transition">
-    <div class="font-bold text-[24px] lg:text-[40px] mx-auto leading-normal lg:pt-1 mb-[-6px] absolute lg:static left-0 right-0 text-center">LOGO
-    </div>
-    <div class="flex justify-between text-sm items-center">
+    class="js-header header">
+    <div class="header__ctn">
+      <div class="header__logo js-header-logo">
+        <img class="header__img header__img--b" src="/assets/images/logo-black.png" alt="#">
+        <img class="header__img header__img--w" src="/assets/images/logo-white.png" alt="#">
+      </div>
       <span class="lg:hidden">
         <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="0.5" x2="16" y2="0.5" stroke="currentColor" />
@@ -28,53 +36,49 @@
           <line y1="12.5" x2="16" y2="12.5" stroke="currentColor" />
         </svg>
       </span>
-      <div class="hidden lg:flex gap-[33px]">
-        <span>Per tutti</span>
-        <span class="text-white/50">Donna</span>
-        <span class="text-white/50">Uomo</span>
-      </div>
-      <div class="hidden lg:flex gap-[23px]">
-        <span>Sneakers</span>
-        <span>Altre calzature</span>
-        <span>Borse</span>
-        <span>Collezioni</span>
-        <span>Abbigliamento</span>
-        <span>Accessori</span>
-        <span>Shop the look</span>
-      </div>
-      <div class="flex gap-[20px]">
-        <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 6.5C11 8.98528 8.98528 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5Z"
-              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M14.5002 14.4999L10.0352 10.0349" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </span>
-        <span class="hidden lg:block"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10.3335 4.33325C10.3335 5.71396 9.21421 6.83325 7.8335 6.83325C6.45278 6.83325 5.3335 5.71396 5.3335 4.33325C5.3335 2.95254 6.45278 1.83325 7.8335 1.83325C9.21421 1.83325 10.3335 2.95254 10.3335 4.33325Z"
-              stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-            <path
-              d="M3.59086 10.2574C4.71607 9.13214 6.2422 8.5 7.8335 8.5C9.4248 8.5 10.9509 9.13214 12.0761 10.2574C13.0829 11.2641 13.6949 12.5918 13.8126 14H1.85435C1.97205 12.5918 2.58409 11.2641 3.59086 10.2574Z"
-              stroke="white" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </span>
-        <svg class="hidden lg:block" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M9.57839 11.7312L7.99984 14.2039L6.42128 11.7312L6.42136 11.7311L6.41586 11.7229L5.0998 9.7488L3.88665 7.32249C3.62576 6.80072 3.4701 6.2327 3.42853 5.65082C3.28817 3.68572 4.45769 1.86255 6.30236 1.1708L6.39308 1.13678C7.42903 0.748297 8.57064 0.748297 9.60659 1.13678L9.69731 1.1708C11.542 1.86255 12.7115 3.68572 12.5711 5.65082C12.5296 6.2327 12.3739 6.80072 12.113 7.3225L10.8999 9.7488L9.58381 11.7229L9.58373 11.7228L9.57839 11.7312Z"
-            stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-          <circle cx="8.00016" cy="5.33341" r="2.16667" stroke="white" />
-        </svg>
-        <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <mask id="path-1-inside-1_50_403" fill="white">
-              <path d="M10.5 5.5V3C10.5 1.619 9.381 0.5 8 0.5C6.619 0.5 5.5 1.619 5.5 3V5.5" />
-            </mask>
-            <path
-              d="M9.5 5.5C9.5 6.05228 9.94772 6.5 10.5 6.5C11.0523 6.5 11.5 6.05228 11.5 5.5H9.5ZM4.5 5.5C4.5 6.05228 4.94772 6.5 5.5 6.5C6.05228 6.5 6.5 6.05228 6.5 5.5H4.5ZM11.5 5.5V3H9.5V5.5H11.5ZM11.5 3C11.5 1.06672 9.93328 -0.5 8 -0.5V1.5C8.82872 1.5 9.5 2.17128 9.5 3H11.5ZM8 -0.5C6.06672 -0.5 4.5 1.06672 4.5 3H6.5C6.5 2.17128 7.17128 1.5 8 1.5V-0.5ZM4.5 3V5.5H6.5V3H4.5Z"
-              fill="currentColor" mask="url(#path-1-inside-1_50_403)" />
-            <path d="M13.0475 6L13.9475 15H2.05249L2.95249 6H13.0475Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </span>
+      <div class="header__nav">
+        <div class="header__m-cat">
+          <span>MX</span>
+          <span>Woman</span>
+          <span>Man</span>
+        </div>
+        <div class="header__menu">
+          <span>Shoes</span>
+          <span>Bags</span>
+          <span>Clothing</span>
+          <span>Shop by style</span>
+          <span>Inside Hogan</span>
+        </div>
+        <div class="header__icn">
+          <span class="header__icn-src">
+            <span class="mr-[14px]">Cerca</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 6.5C11 8.98528 8.98528 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5Z"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.5002 14.4999L10.0352 10.0349" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="hidden lg:block"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.3335 4.33325C10.3335 5.71396 9.21421 6.83325 7.8335 6.83325C6.45278 6.83325 5.3335 5.71396 5.3335 4.33325C5.3335 2.95254 6.45278 1.83325 7.8335 1.83325C9.21421 1.83325 10.3335 2.95254 10.3335 4.33325Z"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M3.59086 10.2574C4.71607 9.13214 6.2422 8.5 7.8335 8.5C9.4248 8.5 10.9509 9.13214 12.0761 10.2574C13.0829 11.2641 13.6949 12.5918 13.8126 14H1.85435C1.97205 12.5918 2.58409 11.2641 3.59086 10.2574Z"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="path-1-inside-1_50_403" fill="white">
+                <path d="M10.5 5.5V3C10.5 1.619 9.381 0.5 8 0.5C6.619 0.5 5.5 1.619 5.5 3V5.5" />
+              </mask>
+              <path
+                d="M9.5 5.5C9.5 6.05228 9.94772 6.5 10.5 6.5C11.0523 6.5 11.5 6.05228 11.5 5.5H9.5ZM4.5 5.5C4.5 6.05228 4.94772 6.5 5.5 6.5C6.05228 6.5 6.5 6.05228 6.5 5.5H4.5ZM11.5 5.5V3H9.5V5.5H11.5ZM11.5 3C11.5 1.06672 9.93328 -0.5 8 -0.5V1.5C8.82872 1.5 9.5 2.17128 9.5 3H11.5ZM8 -0.5C6.06672 -0.5 4.5 1.06672 4.5 3H6.5C6.5 2.17128 7.17128 1.5 8 1.5V-0.5ZM4.5 3V5.5H6.5V3H4.5Z"
+                fill="currentColor" mask="url(#path-1-inside-1_50_403)" />
+              <path d="M13.0475 6L13.9475 15H2.05249L2.95249 6H13.0475Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
       </div>
     </div>
   </header>
@@ -747,29 +751,38 @@
           <div class="slide " data-index="0">We love freedom</div>
           <div class="slide" data-index="1">#GenH</div>
           <div class="slide" data-index="2">Metaverso</div>
-        </div>        
+        </div>
         <div id="edit5" class="swiper lg:mx-[40px]">
           <div class="swiper-wrapper">
             <div class="swiper-slide edit5-slide">
               <p class="edit5-slide__tlt">1Collection</p>
               <div class="edit5-slide__img ">
-                <img src="https://www.tods.com/medias/tods-hp-0803-DiBag-01-hero-Desktop.jpg?context=bWFzdGVyfHJvb3R8NTMxNTk2fGltYWdlL2pwZWd8aGIyL2hmYi85MTI1MDY4MTExOTAyLmpwZ3xhZTBiODUyM2NhNGM1OGRiZWRlZTdhM2JlZDEzZmJlNmE3NTAxZTA3NTRiNmU3ODRjYjQ5ZDM5NTM3ZDY2OTdk" alt="#">
+                <img
+                  src="https://www.tods.com/medias/tods-hp-0803-DiBag-01-hero-Desktop.jpg?context=bWFzdGVyfHJvb3R8NTMxNTk2fGltYWdlL2pwZWd8aGIyL2hmYi85MTI1MDY4MTExOTAyLmpwZ3xhZTBiODUyM2NhNGM1OGRiZWRlZTdhM2JlZDEzZmJlNmE3NTAxZTA3NTRiNmU3ODRjYjQ5ZDM5NTM3ZDY2OTdk"
+                  alt="#">
               </div>
-              <p class="edit5-slide__tags">1#BORSE DONNA  #HOGAN MINI  #HOGANJUNIOR    #ACCESSORI   #DENIM SNEAKERS    #CAPPELLI UOMO#BORSE DONNA      #HOGAN MINI     #HOGAN JUNIOR     #ACCESSORI  #DENIM #SNEAKERS        #CAPPELLI UOMO</p>
+              <p class="edit5-slide__tags">1#BORSE DONNA #HOGAN MINI #HOGANJUNIOR #ACCESSORI #DENIM SNEAKERS #CAPPELLI UOMO#BORSE DONNA #HOGAN MINI
+                #HOGAN JUNIOR #ACCESSORI #DENIM #SNEAKERS #CAPPELLI UOMO</p>
             </div>
             <div class="swiper-slide edit5-slide">
               <p class="edit5-slide__tlt">2Collection</p>
               <div class="edit5-slide__img">
-                <img src="https://www.tods.com/medias/tods-hp-0803-DiBag-01-hero-Desktop.jpg?context=bWFzdGVyfHJvb3R8NTMxNTk2fGltYWdlL2pwZWd8aGIyL2hmYi85MTI1MDY4MTExOTAyLmpwZ3xhZTBiODUyM2NhNGM1OGRiZWRlZTdhM2JlZDEzZmJlNmE3NTAxZTA3NTRiNmU3ODRjYjQ5ZDM5NTM3ZDY2OTdk" alt="#">
+                <img
+                  src="https://www.tods.com/medias/tods-hp-0803-DiBag-01-hero-Desktop.jpg?context=bWFzdGVyfHJvb3R8NTMxNTk2fGltYWdlL2pwZWd8aGIyL2hmYi85MTI1MDY4MTExOTAyLmpwZ3xhZTBiODUyM2NhNGM1OGRiZWRlZTdhM2JlZDEzZmJlNmE3NTAxZTA3NTRiNmU3ODRjYjQ5ZDM5NTM3ZDY2OTdk"
+                  alt="#">
               </div>
-              <p class="edit5-slide__tags">2#BORSE DONNA  #HOGAN MINI  #HOGANJUNIOR    #ACCESSORI   #DENIM SNEAKERS    #CAPPELLI UOMO#BORSE DONNA      #HOGAN MINI     #HOGAN JUNIOR     #ACCESSORI  #DENIM #SNEAKERS        #CAPPELLI UOMO</p>
+              <p class="edit5-slide__tags">2#BORSE DONNA #HOGAN MINI #HOGANJUNIOR #ACCESSORI #DENIM SNEAKERS #CAPPELLI UOMO#BORSE DONNA #HOGAN MINI
+                #HOGAN JUNIOR #ACCESSORI #DENIM #SNEAKERS #CAPPELLI UOMO</p>
             </div>
             <div class="swiper-slide edit5-slide">
               <p class="edit5-slide__tlt ">3Collection</p>
               <div class="edit5-slide__img">
-                <img src="https://www.tods.com/medias/tods-hp-0803-DiBag-01-hero-Desktop.jpg?context=bWFzdGVyfHJvb3R8NTMxNTk2fGltYWdlL2pwZWd8aGIyL2hmYi85MTI1MDY4MTExOTAyLmpwZ3xhZTBiODUyM2NhNGM1OGRiZWRlZTdhM2JlZDEzZmJlNmE3NTAxZTA3NTRiNmU3ODRjYjQ5ZDM5NTM3ZDY2OTdk" alt="#">
+                <img
+                  src="https://www.tods.com/medias/tods-hp-0803-DiBag-01-hero-Desktop.jpg?context=bWFzdGVyfHJvb3R8NTMxNTk2fGltYWdlL2pwZWd8aGIyL2hmYi85MTI1MDY4MTExOTAyLmpwZ3xhZTBiODUyM2NhNGM1OGRiZWRlZTdhM2JlZDEzZmJlNmE3NTAxZTA3NTRiNmU3ODRjYjQ5ZDM5NTM3ZDY2OTdk"
+                  alt="#">
               </div>
-              <p class="edit5-slide__tags">3#BORSE DONNA  #HOGAN MINI  #HOGANJUNIOR    #ACCESSORI   #DENIM SNEAKERS    #CAPPELLI UOMO#BORSE DONNA      #HOGAN MINI     #HOGAN JUNIOR     #ACCESSORI  #DENIM #SNEAKERS        #CAPPELLI UOMO</p>
+              <p class="edit5-slide__tags">3#BORSE DONNA #HOGAN MINI #HOGANJUNIOR #ACCESSORI #DENIM SNEAKERS #CAPPELLI UOMO#BORSE DONNA #HOGAN MINI
+                #HOGAN JUNIOR #ACCESSORI #DENIM #SNEAKERS #CAPPELLI UOMO</p>
             </div>
           </div>
         </div>
