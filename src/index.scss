@@ -159,14 +159,26 @@
 
   &__menu {
     @apply absolute left-1/2 hidden -translate-x-1/2 gap-[23px] lg:flex;
+    span {
+      @apply cursor-pointer;
+    }
   }
 
   &__icn {
     @apply flex items-center gap-[24px];
+    span {
+      @apply cursor-pointer;
+    }    
   }
 
   &__m-cat {
     @apply hidden gap-[26px] lg:flex;
+    span {
+      @apply cursor-pointer;
+    }
+    span:not(.selected) {
+      @apply opacity-50;
+    }
   }
 
   &__icn-src {

@@ -130,4 +130,16 @@ $(() => {
     .addTo(controller);
 
   // window.addEventListener('resize', handleResize);
+  const $nav = $('.header__nav span');
+  const $menu = $('.header__menu');
+  $nav.on('click', function () {
+    $nav.each(function () {
+      $(this).removeClass('selected');
+    });
+    $(this).addClass('selected');
+    $menu.removeClass('menu-animation');
+    setTimeout(function () {
+      $menu.addClass('menu-animation');
+    }, 50);
+  });
 });
