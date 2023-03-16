@@ -44,8 +44,6 @@ $(() => {
     wrapAround: true,
     selectedAttraction: 0.015,
     friction: 0.25,
-    cellAlign: 'left',
-    contain: true,
   });
   flickity.x = 0;
 
