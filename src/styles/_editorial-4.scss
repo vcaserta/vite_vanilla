@@ -1,16 +1,22 @@
 .edit-4-item {
-  @apply ml-[24px] lg:ml-[117px] lg:w-1/5 cursor-default;
+  @apply cursor-default lg:ml-[40px] lg:w-1/5;
 
   &__tit {
-    @apply origin-left scale-100 text-[32px] leading-[40px] lg:text-[60px] font-bold lg:leading-[60px] transition-all duration-300 ease-linear will-change-transform;
+    @apply origin-left scale-100 text-[50px] font-bold leading-[40px] will-change-transform [transition:transform_0.3s_linear,color_0.3s_ease] lg:text-[60px] lg:leading-[60px];
   }
 
   &__wrp-t {
-    @apply flex flex-col items-start transition-all duration-300 ease-linear; // h-[60px]
+    @apply flex flex-col items-start text-black transition-all duration-300 ease-linear; // h-[60px]
   }
-
+  &__ctn-t {
+    @apply flex items-center lg:block;
+  }
   &__link {
-    @apply scale-0 underline opacity-0 transition-all duration-300 ease-linear will-change-transform;
+    @apply scale-75 opacity-0 transition-all duration-300 ease-linear will-change-transform lg:underline;
+    @apply w-full bg-black text-white lg:h-auto lg:w-auto lg:bg-transparent lg:text-black;
+    @apply flex items-center justify-center text-sm font-semibold lg:block lg:text-base lg:font-normal;
+    @apply h-0 lg:h-auto;
+    // @apply h-[42px];
   }
 
   &__bg {
@@ -18,23 +24,45 @@
   }
 
   &__cnt {
-    @apply pointer-events-none absolute top-1/2 left-[43%] flex -translate-y-1/2 scale-75 items-end opacity-0 transition-all duration-300 ease-linear will-change-transform;
+    @apply pointer-events-none invisible top-1/2 hidden -translate-y-1/2 scale-75 items-end bg-white/50 px-[15px] py-[10px] opacity-0 transition-all duration-300 ease-linear will-change-transform lg:absolute lg:left-[41%] lg:flex lg:bg-transparent lg:p-0;
+    // @apply h-0 lg:h-auto;
   }
 
   &__wrp-img {
-    @apply pointer-events-none h-[310px] w-[310px] overflow-hidden;
+    @apply pointer-events-none h-[77px] w-[73px] overflow-hidden lg:h-[256px] lg:w-[256px];
   }
   &__img {
     @apply h-full w-full object-cover;
   }
   &__prd-t {
-    @apply flex flex-col pl-[24px] pb-[24px];
+    @apply flex flex-1 items-end justify-between pl-[10px] lg:flex-col lg:items-start lg:justify-start lg:pl-[20px] lg:pb-[5px];
   }
   &__prd-tit {
-    @apply mb-[7px] text-[30px] font-bold leading-[35px] will-change-transform;
+    @apply mb-[7px] text-xs font-normal leading-5 will-change-transform lg:text-[30px] lg:font-semibold lg:leading-[35px];
+  }
+  &__prd-prc {
+    @apply text-xs font-bold lg:text-xl lg:font-normal;
   }
   &__prd-b {
-    @apply mt-[16px] h-[58px] w-[184px] bg-black text-white;
+    @apply flex h-[30px] w-[30px] items-center justify-center bg-black text-white lg:mt-[50px] lg:h-[58px] lg:w-[256px];
+  }
+  &__prd-w-cnt {
+    @apply flex flex-col;
+  }
+}
+
+.plus_icon {
+  @apply relative mr-6 h-[10px] w-[10px];
+  &:before {
+    content: '';
+    @apply absolute inline-block h-[5px] w-[20px] bg-black transition-all duration-300;
+  }
+  &:after {
+    content: '';
+    @apply absolute mt-[-8px] ml-[8px] inline-block h-[20px] w-[5px] bg-black transition-all duration-300;
+  }
+  &.active {
+    @apply mt-[0] h-[10px] w-[10px];
   }
 }
 
@@ -43,22 +71,42 @@
     @apply w-full;
 
     .edit-4-item__wrp-t {
-      @apply my-[30px];
+      @apply my-[30px] text-black;
+      .plus_icon {
+        &:before,
+        &:after {
+          @apply bg-black;
+        }
+        &:after {
+          @apply mt-[0] h-[5px] w-[5px];
+        }
+      }
+
+      .edit-4-item__link {
+        @apply h-[42px] lg:h-auto;
+      }
     }
 
     .edit-4-item__bg {
       @apply scale-100 opacity-100;
     }
     .edit-4-item__cnt {
-      @apply pointer-events-auto scale-100 opacity-100;
+      @apply pointer-events-auto visible scale-100 opacity-100;
+      @apply h-auto;
     }
     .edit-4-item__link {
-      @apply scale-100 opacity-100;
+      @apply mt-[20px] lg:my-[20px] scale-100 opacity-100 lg:m-0;
     }
   }
   &.resized {
     .edit-4-item__tit {
-      @apply origin-left scale-[.85] text-[#758791] opacity-30;
+      @apply origin-left scale-[.85] text-[#727072] lg:text-[#758791] lg:opacity-30;
+    }
+    .plus_icon {
+      &:before,
+      &:after {
+        @apply bg-[#727072];
+      }
     }
     .edit-4-item__link {
       @apply text-[#758791];
