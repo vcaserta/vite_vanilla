@@ -114,5 +114,20 @@ $(() => {
       .addTo(controller);
   }
 
+  const tweenHeaderSearch = gsap.to('.src-brd', {
+    duration: 2,
+    background: '#171614',
+  });
+
+  new ScrollMagic.Scene({
+    // reverse: false,
+    triggerElement: '#trigger1',
+    triggerHook: 0,
+    duration: 30,
+  })
+    .setTween(tweenHeaderSearch)
+    .addIndicators()
+    .addTo(controller);
+
   // window.addEventListener('resize', handleResize);
 });

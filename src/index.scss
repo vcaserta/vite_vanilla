@@ -97,7 +97,8 @@
 .header {
   @apply fixed left-0 right-0 top-0 z-[100] flex h-[48px] w-full flex-col justify-center  bg-transparent px-[24px] text-white lg:top-[24px] lg:h-[112px] lg:justify-start lg:p-0;
   @apply overflow-hidden lg:pt-[25px];
-  transition: background 300ms ease-in-out, padding 300ms ease-in-out, height 300ms ease-in-out;
+  transition: background 300ms ease-in-out, padding 300ms ease-in-out,
+    height 300ms ease-in-out;
   @media screen and (min-width: 1024px) {
     // &:before {
     //   position: absolute;
@@ -120,7 +121,7 @@
       &:before {
         top: -100% !important;
       }
-      .header__icn-src:before {
+      .src-brd {
         background-color: #171614 !important;
       }
       .header__img--w {
@@ -133,53 +134,51 @@
   }
 
   &__logo {
-    @apply z-10 min-w-[120px] max-w-[120px] h-[41px] relative lg:top-[-4px] scale-100;
+    @apply relative z-10 h-[41px] min-w-[120px] max-w-[120px] scale-100 lg:top-[-4px];
     transition: transform 300ms ease-in-out, scale 300ms ease-in-out;
   }
   &__img {
-    @apply w-full h-full absolute inset-0;
+    @apply absolute inset-0 h-full w-full;
     transition: opacity 300ms ease-in-out;
     &--b {
-      @apply opacity-0
+      @apply opacity-0;
     }
     &--w {
-      @apply opacity-100
+      @apply opacity-100;
     }
   }
 
   &__ctn {
-    @apply flex text-sm items-end z-10 w-full lg:px-[48px];
+    @apply z-10 flex w-full items-end text-sm lg:px-[48px];
   }
 
   &__nav {
-    @apply flex justify-between w-full pl-[40px];
+    @apply flex w-full justify-between pl-[40px];
     transition: padding 300ms ease-in-out, color 300ms ease-in-out;
   }
 
   &__menu {
-    @apply hidden lg:flex gap-[23px] absolute left-1/2 -translate-x-1/2;
+    @apply absolute left-1/2 hidden -translate-x-1/2 gap-[23px] lg:flex;
   }
 
   &__icn {
-    @apply flex gap-[24px] items-center;
+    @apply flex items-center gap-[24px];
   }
 
   &__m-cat {
-    @apply hidden lg:flex gap-[26px];
+    @apply hidden gap-[26px] lg:flex;
   }
 
   &__icn-src {
-    @apply w-[128px] flex items-center justify-end relative;
-    &:before {
-      position: absolute;
-      content: '';
-      left: 0;
-      bottom: -4px;
-      height: 1px;
-      width: 100%;
-      background: white;
-      transition: background 300ms ease-in-out;
-    }
+    @apply flex w-[128px] items-center justify-end relative;
+  }
+  .src-brd {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1px;
+    width: 100%;
+    background: white;
+    transition: background 300ms ease-in-out;
   }
 }
-
