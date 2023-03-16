@@ -4,15 +4,15 @@
     @apply absolute h-full w-full object-cover;
   }
   &__b-text {
-    @apply absolute bottom-[65px] flex w-full items-end justify-between px-[45px];
+    @apply absolute bottom-[24px] lg:bottom-[65px] flex flex-col lg:flex-row w-full items-end justify-between px-[24px] lg:px-[45px];
   }
   &__w-text {
     @apply text-white;
   }
   &__ttl {
-    @apply text-[34px] font-bold;
+    @apply text-[32px] font-bold lg:text-[34px] mb-[10px] lg:mb-0;
   }
   &__btn {
-    @apply flex h-[58px] w-[155px] items-center justify-center bg-white text-[#121721];
+    @apply flex h-[40px] mt-[24px] lg:mt-0 lg:h-[58px] w-full items-center justify-center border-black border bg-white font-semibold text-[#121721] lg:w-[155px] lg:border-0 lg:font-normal;
   }
 }

@@ -1,0 +1,21 @@
+.slideshow5 {
+  .is-selected {
+    color: black;
+  }
+}
+
+.edit5-slide {
+  @apply  lg:flex lg:justify-end;
+  &__tlt {
+    @apply font-medium pb-[65px] px-[13px] lg:absolute lg:left-0 lg:p-0 lg:top-[110px] lg:text-[28px];
+  }
+  &__img {
+    @apply aspect-square lg:w-1/2;
+    img {
+      @apply h-full w-full object-cover;
+    }
+  }
+  &__tags {
+    @apply text-sm leading-[28px] font-medium pt-[10px] px-[20px] lg:absolute lg:w-[30%] lg:top-[312px] lg:left-0 lg:p-0;
+  }  
+}
