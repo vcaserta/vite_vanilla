@@ -68,36 +68,6 @@ $(() => {
       .addIndicators()
       .addTo(controller);
 
-    const tweenHeaderLogoW = gsap.to('.header__img--w', {
-      duration: 2,
-      opacity: 0,
-    });
-
-    new ScrollMagic.Scene({
-      // reverse: false,
-      triggerElement: '#trigger1',
-      triggerHook: 0,
-      duration: 30,
-    })
-      .setTween(tweenHeaderLogoW)
-      .addIndicators()
-      .addTo(controller);
-
-    const tweenHeaderLogoB = gsap.to('.header__img--b', {
-      duration: 2,
-      opacity: 1,
-    });
-
-    new ScrollMagic.Scene({
-      // reverse: false,
-      triggerElement: '#trigger1',
-      triggerHook: 0,
-      duration: 30,
-    })
-      .setTween(tweenHeaderLogoB)
-      .addIndicators()
-      .addTo(controller);
-
     const tweenHeaderNav = gsap.to('.header__nav', {
       duration: 2,
       paddingLeft: '0',
@@ -113,6 +83,36 @@ $(() => {
       .addIndicators()
       .addTo(controller);
   }
+
+  const tweenHeaderLogoW = gsap.to('.header__img--w', {
+    duration: 2,
+    opacity: 0,
+  });
+
+  new ScrollMagic.Scene({
+    // reverse: false,
+    triggerElement: '#trigger1',
+    triggerHook: 0,
+    duration: 30,
+  })
+    .setTween(tweenHeaderLogoW)
+    .addIndicators()
+    .addTo(controller);
+
+  const tweenHeaderLogoB = gsap.to('.header__img--b', {
+    duration: 2,
+    opacity: 1,
+  });
+
+  new ScrollMagic.Scene({
+    // reverse: false,
+    triggerElement: '#trigger1',
+    triggerHook: 0,
+    duration: 30,
+  })
+    .setTween(tweenHeaderLogoB)
+    .addIndicators()
+    .addTo(controller);
 
   const tweenHeaderSearch = gsap.to('.src-brd', {
     duration: 2,

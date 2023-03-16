@@ -95,7 +95,7 @@
 @import '/src/styles/animations.scss';
 
 .header {
-  @apply fixed left-0 right-0 top-0 z-[100] flex h-[48px] w-full flex-col justify-center  bg-transparent px-[24px] text-white lg:top-[24px] lg:h-[112px] lg:justify-start lg:p-0;
+  @apply fixed left-0 right-0 top-[24px] z-[100] flex h-[60px] w-full flex-col justify-center  bg-transparent px-[24px] text-white lg:top-[24px] lg:h-[112px] lg:justify-start lg:p-0;
   @apply overflow-hidden lg:pt-[25px];
   transition: background 300ms ease-in-out, padding 300ms ease-in-out,
     height 300ms ease-in-out;
@@ -134,7 +134,7 @@
   }
 
   &__logo {
-    @apply relative z-10 h-[41px] min-w-[120px] max-w-[120px] scale-100 lg:top-[-4px];
+    @apply left-[37px] lg:left-0 relative z-10 h-[30px] min-w-[85px] max-w-[85px] top-[-3px] lg:h-[41px] lg:min-w-[120px] lg:max-w-[120px] scale-100 lg:top-[-4px];
     transition: transform 300ms ease-in-out, scale 300ms ease-in-out;
   }
   &__img {
