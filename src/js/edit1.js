@@ -100,6 +100,7 @@ $(() => {
   const swiperMain = new Swiper('#edit1Main', {
     modules: [EffectFade],
     slidesPerView: 1,
+    initialSlide: 1,
     allowTouchMove: false,
     effect: 'fade',
     fadeEffect: {
