@@ -1,3 +1,8 @@
+.edit-4 {
+  @apply  p-6 lg:pt-[65px] lg:pb-[35px] lg:px-0 flex flex-col justify-around h-full w-full relative bg-cover bg-center bg-[url('/assets/images/editorial-4.1.png')] z-[-1];
+}
+
+
 .edit-4-item {
   @apply cursor-default lg:ml-[40px] lg:w-1/5;
 
