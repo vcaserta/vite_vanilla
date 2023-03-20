@@ -128,20 +128,20 @@ html {
   transition: background 300ms ease-in-out, padding 300ms ease-in-out,
     height 300ms ease-in-out;
   @media screen and (min-width: 1024px) {
-    // &:before {
-    //   position: absolute;
-    //   content: '';
-    //   left: 0;
-    //   top: 0;
-    //   height: 100%;
-    //   width: 100%;
-    //   background: linear-gradient(
-    //     180deg,
-    //     rgba(23, 22, 20, 0.65) 0%,
-    //     rgba(23, 22, 20, 0) 100%
-    //   );
-    //   transition: all 200ms ease-in-out;
-    // }
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(23, 22, 20, 0.65) 0%,
+        rgba(23, 22, 20, 0) 100%
+      );
+      transition: all 200ms ease-in-out;
+    }
     box-shadow: none;
     &:hover {
       background-color: white !important;
@@ -229,7 +229,9 @@ html {
   &--scroll {
     @apply bg-white text-[#171614] lg:h-[80px] lg:pt-[9px];
     box-shadow: '0px 0px 25px rgba(0, 0, 0, 0.1)';
-
+    &:before {
+      display: none !important;
+    }
     .header__logo {
       @apply lg:translate-x-[-6px] lg:translate-y-[6px] lg:scale-[0.7];
     }
