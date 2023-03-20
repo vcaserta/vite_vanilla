@@ -4,7 +4,7 @@
     @apply absolute h-full w-full object-cover;
   }
   &__b-text {
-    @apply absolute bottom-[24px] lg:bottom-[65px] flex flex-col lg:flex-row w-full items-end justify-between px-[24px] lg:px-[45px];
+    @apply absolute bottom-[24px] lg:bottom-[65px] flex flex-col lg:flex-row w-full lg:items-end justify-between px-[24px] lg:px-[45px];
   }
   &__w-text {
     @apply text-white;

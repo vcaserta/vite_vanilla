@@ -7,7 +7,7 @@ import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 
 import Swiper, { Autoplay } from 'swiper';
-import 'slick-carousel';
+// import 'slick-carousel';
 // eslint-disable-next-line no-multi-assign
 window.$ = window.jQuery = $;
 
@@ -33,9 +33,14 @@ $(() => {
   const width = window.innerWidth;
   const isMobile = width < 1024;
 
+  const height =
+    getComputedStyle(document.documentElement)
+      .getPropertyValue('--vh')
+      .replace(/px/, '') * 100;
+
   const tweenSlide = gsap.to('#hero-carousel .js-hero-slide', {
     duration: 2,
-    height: isMobile ? '63vh' : '76vh',
+    height: isMobile ? `calc(${height}px - 170px - 75px)` : '76vh',
     width: isMobile
       ? 'calc(100% - 30px - 24px - 24px)'
       : 'calc(100% - 132px - 40px - 40px)',
@@ -93,7 +98,7 @@ $(() => {
     duration: isMobile ? 50 : 200,
   })
     .setTween(tweenSlide)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -103,7 +108,7 @@ $(() => {
     duration: isMobile ? 50 : 200,
   })
     .setTween(tweenText)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -113,7 +118,7 @@ $(() => {
     duration: isMobile ? 50 : 200,
   })
     .setTween(tweenTitle)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -123,7 +128,7 @@ $(() => {
     duration: isMobile ? 50 : 200,
   })
     .setTween(tweenButton)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -133,7 +138,7 @@ $(() => {
     duration: isMobile ? 50 : 200,
   })
     .setTween(tweenPara)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
   new ScrollMagic.Scene({
@@ -143,17 +148,25 @@ $(() => {
     duration: isMobile ? 50 : 200,
   })
     .setTween(tweenBlockText)
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
-  new ScrollMagic.Scene({
+  const scenePin = new ScrollMagic.Scene({
     triggerElement: '#trigger1',
     triggerHook: 0,
-    duration: isMobile ? 70 : 200,
+    duration: isMobile ? 70 : 250,
   })
     .setPin('#hero-carousel')
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
-  // window.addEventListener('resize', handleResize);
+  // new ScrollMagic.Scene({
+  //   reverse: false,
+  //   triggerElement: '.slideshow',
+  //   offset: 50,
+  //   triggerHook: 0.9,
+  // })
+  //   .setClassToggle('.slideshow', 'visible')
+  //   .addIndicators()
+  //   .addTo(controller);
 });

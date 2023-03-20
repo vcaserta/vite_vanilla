@@ -11,7 +11,7 @@
 <body class="body">
   <!-- Strip Banner -->
   <div
-    class="bg-[#171614] text-white h-[24px] px-[48px] fixed left-0 right-0 lg:bg-[#E7E7E7] flex items-center justify-center lg:justify-between w-full z-[100] lg:text-[#727072] font-medium text-[10px]">
+    class="bg-[#171614] text-white h-[24px] px-[48px] fixed left-0 right-0 lg:bg-[#E7E7E7] flex items-center justify-center lg:justify-between w-full z-[100] lg:text-[#727072] font-medium text-[10px] max-w-[1440px] mx-auto">
     <div class="hidden lg:flex items-center">
       <span class="mr-[24px]">Call Us</span>
       <span>Boutiques</span>
@@ -22,14 +22,13 @@
   <!-- End Strip Banner -->
 
   <!-- Header -->
-  <header
-    class="js-header header">
+  <header class="js-header header">
     <div class="header__ctn">
       <div class="header__logo js-header-logo">
         <img class="header__img header__img--b" src="/assets/images/logo-black.png" alt="#">
         <img class="header__img header__img--w" src="/assets/images/logo-white.png" alt="#">
       </div>
-      <span class="lg:hidden absolute top-[27px]">
+      <span class="lg:hidden absolute top-[27px] header__mob-menu">
         <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
           <line y1="0.5" x2="16" y2="0.5" stroke="currentColor" />
           <line y1="6.5" x2="16" y2="6.5" stroke="currentColor" />
@@ -52,7 +51,7 @@
         <div class="header__icn absolute right-[24px] top-[24px] lg:static">
           <span class="header__icn-src">
             <span class="src-brd hidden lg:block"></span>
-            <span class="hidden lg:inline-block mr-[14px]">Cerca</span>
+            <span class="hidden lg:inline-block mr-[14px]">Search</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 6.5C11 8.98528 8.98528 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5Z"
                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
@@ -84,10 +83,11 @@
     </div>
   </header>
   <!-- END Header -->
-  <main id="main" class="overflow-y-scroll overflow-x-hidden w-full h-screen">
+  <main id="main">
+    <div class="js-sentinel absolute h-1 w-full top-[30px] lg:top-[250px]"></div>
     <!-- Hero Carousel -->
     <div class="spacer s0 absolute top-0" id="trigger1"></div>
-    <div id="hero-carousel" class="w-full h-screen">
+    <div id="hero-carousel" class="w-full h-screen-ios">
       <div id="heroSwiper" class="swiper h-full mx-auto">
         <div class="swiper-wrapper will-change-transform">
           <!-- Hero Slide -->
@@ -192,7 +192,11 @@
       </div>
       <div class="mt-[15px] mb-[40px] lg:mb-[160px] relative overflow-hidden">
         <div class="absolute lg:z-[2] w-full lg:w-[31.5%] overflow-hidden h-full" style="box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.02);">
+          <!-- <video class="h-full w-full object-cover" id='video' autoplay muted loop poster="urlposter">
+            <source id='mp4' src="urlVideo" type='video/mp4' />
+          </video> -->
           <img class="w-full h-full object-cover" src="src/assets/images/03-Inside-Hogan-Hyperactive-02-Box-OnTopCategory 1.png" />
+
         </div>
         <div id="edit1Main" class="swiper lg:pl-[31.5%]">
           <div class="swiper-wrapper">
@@ -521,6 +525,9 @@
           more</button>
       </div>
       <div class="media-block lg:aspect-[1442/414] aspect-[390/220]">
+        <!-- <video class="h-full w-full object-cover" id='video' autoplay muted loop poster="urlposter">
+          <source id='mp4' src="urlVideo" type='video/mp4' />
+        </video> -->
         <img class="w-full h-full object-cover"
           src="https://www.tods.com/medias/tods-hp-0803-DiBag-01-hero-Desktop.jpg?context=bWFzdGVyfHJvb3R8NTMxNTk2fGltYWdlL2pwZWd8aGIyL2hmYi85MTI1MDY4MTExOTAyLmpwZ3xhZTBiODUyM2NhNGM1OGRiZWRlZTdhM2JlZDEzZmJlNmE3NTAxZTA3NTRiNmU3ODRjYjQ5ZDM5NTM3ZDY2OTdk"
           alt="#">
@@ -622,9 +629,10 @@
     <!-- End Editorial 3  -->
 
     <!-- Editorial 4 -->
-    <section class="h-[366px] lg:h-[352px] overflow-hidden mb-[110px] lg:mb-[140px]" style="background: rgba(242, 242, 242, 0.2); backdrop-filter: blur(2.5px)">
+    <section class="h-[366px] lg:h-[352px] overflow-hidden mb-[110px] lg:mb-[140px]"
+      style="background: rgba(242, 242, 242, 0.2); backdrop-filter: blur(2.5px)">
       <div
-        class="edit-4 p-6 lg:pt-[65px] lg:pb-[35px] lg:px-0 flex flex-col justify-around h-full w-full z-[-1] relative bg-cover bg-center bg-[url('/src/assets/images/editorial-4.1.png')]">
+        class="edit-4 p-6 lg:pt-[65px] lg:pb-[35px] lg:px-0 flex flex-col justify-around h-full w-full z-[-1] relative bg-cover bg-center bg-[url('/assets/images/editorial-4.1.png')]">
         <!-- Editorial 4 item -->
         <div class="js-edt-4-item edit-4-item">
           <div class="edit-4-item__wrp-t">
@@ -634,7 +642,7 @@
             </div>
             <a href="#" class="edit-4-item__link">See all products</a>
           </div>
-          <div class="js-edt-4-item__bg edit-4-item__bg bg-[url('/src/assets/images/editorial-4.1.png')]">
+          <div class="js-edt-4-item__bg edit-4-item__bg bg-[url('/assets/images/editorial-4.1.png')]">
           </div>
           <div class="js-edt-4-item__cnt edit-4-item__cnt">
             <div class="edit-4-item__wrp-img">
@@ -795,17 +803,24 @@
     <section class="flex mb-[100px] flex-col lg:flex-row px-[20px] relative pt-[40px] lg:p-0 lg:items-center">
       <div class="flex-1 relative">
         <div class="aspect-[261/231] w-[75%] lg:w-[95%]">
-          <img class="h-full w-full object-cover" src="https://www.tods.com/medias/tods-hp-0803-DiBag-01-hero-Desktop.jpg?context=bWFzdGVyfHJvb3R8NTMxNTk2fGltYWdlL2pwZWd8aGIyL2hmYi85MTI1MDY4MTExOTAyLmpwZ3xhZTBiODUyM2NhNGM1OGRiZWRlZTdhM2JlZDEzZmJlNmE3NTAxZTA3NTRiNmU3ODRjYjQ5ZDM5NTM3ZDY2OTdk" alt="#">
+          <img class="h-full w-full object-cover"
+            src="https://www.tods.com/medias/tods-hp-0803-DiBag-01-hero-Desktop.jpg?context=bWFzdGVyfHJvb3R8NTMxNTk2fGltYWdlL2pwZWd8aGIyL2hmYi85MTI1MDY4MTExOTAyLmpwZ3xhZTBiODUyM2NhNGM1OGRiZWRlZTdhM2JlZDEzZmJlNmE3NTAxZTA3NTRiNmU3ODRjYjQ5ZDM5NTM3ZDY2OTdk"
+            alt="#">
         </div>
-        <div class="aspect-[193/156] w-[56%] lg:w-[70%] absolute top-1/2 translate-y-[-50%] right-0 lg:right-[-140px] shadow-[0px_4px_34px_0px_rgba(0,_0,_0,_0.25)]">
-          <img class="h-full w-full object-cover" src="https://www.hogan.com/medias/03-1-Wrapper-column-donna-HP-HOGAN-6-3.jpg?context=bWFzdGVyfHJvb3R8NTUzMzF8aW1hZ2UvanBlZ3xoNjYvaDI2LzkyMTk2MTA0NzY1NzQuanBnfDEwNTJlYzYwNzI0MThjMWQzMDBhYWQ1Mjk0NTBhMDNlMjQzMWE4NzAzYmFlZDIxYjJmMzdjYWNmZDhjZGMzOGI" alt="#">
-        </div>                
+        <div
+          class="aspect-[193/156] w-[56%] lg:w-[70%] absolute top-1/2 translate-y-[-50%] right-0 lg:right-[-140px] shadow-[0px_4px_34px_0px_rgba(0,_0,_0,_0.25)]">
+          <img class="h-full w-full object-cover"
+            src="https://www.hogan.com/medias/03-1-Wrapper-column-donna-HP-HOGAN-6-3.jpg?context=bWFzdGVyfHJvb3R8NTUzMzF8aW1hZ2UvanBlZ3xoNjYvaDI2LzkyMTk2MTA0NzY1NzQuanBnfDEwNTJlYzYwNzI0MThjMWQzMDBhYWQ1Mjk0NTBhMDNlMjQzMWE4NzAzYmFlZDIxYjJmMzdjYWNmZDhjZGMzOGI"
+            alt="#">
+        </div>
       </div>
       <div class="flex-1 lg:pl-[230px] lg:pr-[40px]">
         <p class="text-[24px] font-bold text-[#171614] absolute top-[-3px] lg:static lg:text-[50px] lg:leading-[50px]">Enter the world of Hogan</p>
-        <p class="text-[12px] text-[#171614] my-[20px] leading-[24px] lg:text-[16px]">Stay in the know with the latest on our Collections and range of services. Subscribe now to receive specially dedicated promotions, the Hogan newsletter and the chance to participate in exclusive initiatives and events.</p>
+        <p class="text-[12px] text-[#171614] my-[20px] leading-[24px] lg:text-[16px]">Stay in the know with the latest on our Collections and range of
+          services. Subscribe now to receive specially dedicated promotions, the Hogan newsletter and the chance to participate in exclusive
+          initiatives and events.</p>
         <div class="relative lg:w-[75%]">
-          <input type="email" placeholder="Email Address" class="w-full border-b py-[10px] outline-none"/>
+          <input type="email" placeholder="Email Address" class="w-full border-b py-[10px] outline-none" />
           <span class="underline absolute right-0 top-1/2 translate-y-[-50%] cursor-pointer">subscribe</span>
         </div>
       </div>

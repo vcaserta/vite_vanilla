@@ -7,6 +7,32 @@
 @tailwind components;
 @tailwind utilities;
 
+.h-screen-ios {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  overscroll-behavior: none;
+  overflow: hidden !important;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+#main {
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+  -webkit-overscroll-behavior: none;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 @font-face {
   font-family: 'Mutka';
   src: url('/assets/fonts/Mutka-Regular.ttf') format('ttf');
@@ -97,6 +123,8 @@
 .header {
   @apply fixed left-0 right-0 top-[24px] z-[100] flex h-[60px] w-full flex-col justify-center  bg-transparent px-[24px] text-white lg:top-[24px] lg:h-[112px] lg:justify-start lg:p-0;
   @apply overflow-hidden lg:pt-[25px];
+  max-width: 1440px;
+  margin: 0 auto;
   transition: background 300ms ease-in-out, padding 300ms ease-in-out,
     height 300ms ease-in-out;
   @media screen and (min-width: 1024px) {
@@ -134,7 +162,7 @@
   }
 
   &__logo {
-    @apply left-[37px] lg:left-0 relative z-10 h-[30px] min-w-[85px] max-w-[85px] top-[-3px] lg:h-[41px] lg:min-w-[120px] lg:max-w-[120px] scale-100 lg:top-[-4px];
+    @apply relative left-[37px] top-[-3px] z-10 h-[30px] min-w-[85px] max-w-[85px] origin-left scale-100 lg:left-0 lg:top-[-4px] lg:h-[41px] lg:min-w-[120px] lg:max-w-[120px];
     transition: transform 300ms ease-in-out, scale 300ms ease-in-out;
   }
   &__img {
@@ -157,6 +185,10 @@
     transition: padding 300ms ease-in-out, color 300ms ease-in-out;
   }
 
+  &__mob-menu svg {
+    transition: all 300ms ease-in-out;
+  }
+
   &__menu {
     @apply absolute left-1/2 hidden -translate-x-1/2 gap-[23px] lg:flex;
     span {
@@ -168,7 +200,7 @@
     @apply flex items-center gap-[24px];
     span {
       @apply cursor-pointer;
-    }    
+    }
   }
 
   &__m-cat {
@@ -182,7 +214,7 @@
   }
 
   &__icn-src {
-    @apply flex w-[128px] items-center justify-end relative;
+    @apply relative flex w-[128px] items-center justify-end;
   }
   .src-brd {
     position: absolute;
@@ -192,5 +224,26 @@
     width: 100%;
     background: white;
     transition: background 300ms ease-in-out;
+  }
+
+  &--scroll {
+    @apply bg-white text-[#171614] lg:h-[80px] lg:pt-[9px];
+    box-shadow: '0px 0px 25px rgba(0, 0, 0, 0.1)';
+
+    .header__logo {
+      @apply lg:translate-x-[-6px] lg:translate-y-[6px] lg:scale-[0.7];
+    }
+    .header__nav {
+      @apply lg:pl-0;
+    }
+    .header__img--w {
+      @apply opacity-0;
+    }
+    .header__img--b {
+      @apply opacity-100;
+    }
+    .src-brd {
+      @apply bg-[#171614];
+    }
   }
 }
