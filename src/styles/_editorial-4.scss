@@ -1,12 +1,12 @@
 .edit-4 {
-  @apply relative z-[-1] flex h-full w-full flex-col justify-around bg-[url('https://via.placeholder.com/390x456/#b3a1a1/969696')] bg-cover bg-center p-6 lg:bg-[url('https://via.placeholder.com/1400x352/#b3a1a1/969696')] lg:px-0 lg:pt-[65px] lg:pb-[35px];
+  @apply relative z-[-1] flex h-full w-full flex-col justify-around bg-[url('https://via.placeholder.com/390x456/#b3a1a1/969696')] bg-cover bg-center p-6 pt-[45px] lg:bg-[url('https://via.placeholder.com/1400x352/#b3a1a1/969696')] lg:px-0 lg:pt-[65px] lg:pb-[35px];
 }
 
 .edit-4-item {
   @apply cursor-default lg:ml-[40px] lg:w-1/5;
 
   &__tit {
-    @apply origin-left scale-100 text-[50px] font-bold leading-[40px] will-change-transform [transition:transform_0.3s_linear,color_0.3s_ease] lg:text-[60px] lg:leading-[60px];
+    @apply origin-left scale-100 text-[50px] font-bold leading-[40px] [transition:transform_0.3s_linear,color_0.3s_ease] lg:text-[60px] lg:leading-[60px];
   }
 
   &__wrp-t {
@@ -16,7 +16,7 @@
     @apply flex items-center lg:block;
   }
   &__link {
-    @apply scale-75 opacity-0 transition-all duration-300 ease-linear will-change-transform lg:underline;
+    @apply scale-0 lg:scale-75 opacity-0 transition-all duration-300 ease-linear lg:underline;
     @apply w-full bg-black text-white lg:h-auto lg:w-auto lg:bg-transparent lg:text-black;
     @apply flex items-center justify-center text-sm font-semibold lg:block lg:text-base lg:font-normal;
     @apply h-0 lg:h-auto;
@@ -24,16 +24,16 @@
   }
 
   &__bg {
-    @apply pointer-events-none absolute top-0 bottom-0 left-0 right-0 z-[-1] h-full w-full scale-[1.2] bg-cover bg-center opacity-0 transition-all duration-300 ease-linear will-change-transform;
+    @apply pointer-events-none absolute top-0 bottom-0 left-0 right-0 z-[-1] h-full w-full scale-[1.2] bg-cover bg-center opacity-0 transition-all duration-300 ease-linear;
   }
 
   &__cnt {
-    @apply pointer-events-none invisible top-1/2 hidden -translate-y-1/2 scale-75 items-end bg-white/50 px-[15px] py-[10px] opacity-0 transition-all duration-300 ease-linear will-change-transform lg:absolute lg:left-[41%] lg:flex lg:bg-transparent lg:p-0;
-    // @apply h-0 lg:h-auto;
+    @apply pointer-events-none w-full lg:w-auto invisible lg:top-1/2 lg:translate-y-[-50%] scale-0 lg:scale-75 items-center lg:items-end bg-white/50 px-[15px] py-[10px] opacity-0 transition-all duration-300 ease-linear lg:absolute lg:left-[41%] flex lg:bg-transparent lg:p-0;
+    @apply h-0 lg:h-auto ;
   }
 
   &__wrp-img {
-    @apply pointer-events-none h-[77px] w-[73px] overflow-hidden lg:h-[256px] lg:w-[256px];
+    @apply pointer-events-none h-[63px] w-[77px] overflow-hidden lg:h-[256px] lg:w-[256px];
   }
   &__img {
     @apply h-full w-full object-cover;
@@ -42,7 +42,7 @@
     @apply flex flex-1 items-end justify-between pl-[10px] lg:flex-col lg:items-start lg:justify-start lg:pl-[20px] lg:pb-[5px];
   }
   &__prd-tit {
-    @apply mb-[7px] text-xs font-normal leading-5 will-change-transform lg:text-[30px] lg:font-semibold lg:leading-[35px];
+    @apply mb-[7px] text-xs font-normal leading-5 lg:text-[30px] lg:font-semibold lg:leading-[35px];
   }
   &__prd-prc {
     @apply text-xs font-bold lg:text-xl lg:font-normal;
@@ -75,7 +75,7 @@
     @apply w-full;
 
     .edit-4-item__wrp-t {
-      @apply my-[30px] text-black;
+      @apply my-[20px] lg:mt-[20px] lg:mb-[30px] text-black;
       .plus_icon {
         &:before,
         &:after {
@@ -92,10 +92,11 @@
     }
     .edit-4-item__cnt {
       @apply pointer-events-auto visible scale-100 opacity-100;
-      @apply h-auto;
+      @apply mt-[10px] lg:m-0 h-[83px] lg:h-auto;
     }
+
     .edit-4-item__link {
-      @apply mt-[20px] h-[42px] scale-100 opacity-100 lg:m-0 lg:h-auto;
+      @apply mt-[10px] h-[42px] scale-100 opacity-100 lg:m-0 lg:h-auto;
     }
   }
   &.resized {
