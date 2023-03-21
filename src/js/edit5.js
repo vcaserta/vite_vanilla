@@ -80,5 +80,5 @@ $(() => {
     //   .querySelectorAll(`[data-index="${index}"]`)
     //   .forEach((elm) => elm.classList.add('slide-active'));
     swiper.slideTo(index);
-  }, 500);
+  }, 100);
 });
