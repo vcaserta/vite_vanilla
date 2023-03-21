@@ -101,7 +101,7 @@
   }
   &.resized {
     .edit-4-item__tit {
-      @apply origin-left scale-[.85] text-[#727072] lg:text-[#758791] lg:opacity-30;
+      @apply origin-left scale-[.64] lg:scale-[.85] text-[#727072] lg:text-[#758791] lg:opacity-30;
     }
     .plus_icon {
       &:before,
