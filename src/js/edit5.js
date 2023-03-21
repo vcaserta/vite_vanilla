@@ -73,12 +73,6 @@ $(() => {
     const index = carousel
       .querySelector('.flickity-cell.is-selected')
       .getAttribute('data-index');
-    // carousel
-    //   .querySelectorAll('slide-active')
-    //   .forEach((elm) => elm.classList.remove('slide-active'));
-    // carousel
-    //   .querySelectorAll(`[data-index="${index}"]`)
-    //   .forEach((elm) => elm.classList.add('slide-active'));
     swiper.slideTo(index);
   }, 100);
 });

@@ -36,9 +36,9 @@
     position: absolute;
     @apply left-[-25px] bottom-[10px] lg:left-[-70px] lg:bottom-[40px];
   }
-  &.slide-active {
-    @apply text-black;
-  }
+}
+.slideshow .slide-active {
+  @apply text-black;
 }
 
 .edit-1-side-content {
