@@ -1,12 +1,12 @@
 .edit-4 {
-  @apply relative z-[-1] flex h-full w-full flex-col justify-around bg-[url('https://via.placeholder.com/390x456/#b3a1a1/969696')] bg-cover bg-center p-6 pt-[45px] lg:bg-[url('https://via.placeholder.com/1400x352/#b3a1a1/969696')] lg:px-0 lg:pt-[65px] lg:pb-[35px];
+  @apply relative z-[-1] flex h-full w-full flex-col justify-around bg-[url('/assets/images/BG_M_General.png')] bg-cover bg-center p-6 pt-[45px] lg:bg-[url('/assets/images/BG_Generico.png')] lg:px-0 lg:pt-[65px] lg:pb-[35px];
 }
 
 .edit-4-item {
   @apply cursor-default lg:ml-[40px] lg:w-1/5;
 
   &__tit {
-    @apply origin-left scale-100 text-[50px] font-bold leading-[40px] [transition:transform_0.3s_linear,color_0.3s_ease] lg:text-[60px] lg:leading-[60px];
+    @apply origin-left scale-100 text-[50px] text-white font-bold leading-[40px] [transition:transform_0.3s_linear,color_0.3s_ease] lg:text-[60px] lg:leading-[60px];
   }
 
   &__wrp-t {
@@ -59,11 +59,11 @@
   @apply relative mr-6 h-[10px] w-[10px];
   &:before {
     content: '';
-    @apply absolute inline-block h-[5px] w-[20px] bg-black transition-all duration-300;
+    @apply absolute inline-block h-[5px] w-[20px] bg-white transition-all duration-300;
   }
   &:after {
     content: '';
-    @apply absolute mt-[-8px] ml-[8px] inline-block h-[20px] w-[5px] bg-black transition-all duration-300;
+    @apply absolute mt-[-8px] ml-[8px] inline-block h-[20px] w-[5px] bg-white transition-all duration-300;
   }
   &.active {
     @apply mt-[0] h-[10px] w-[10px];
@@ -85,6 +85,9 @@
           @apply mt-[0] h-[5px] w-[5px];
         }
       }
+    }
+    .edit-4-item__tit {
+      @apply text-[#171614];
     }
 
     .edit-4-item__bg {
