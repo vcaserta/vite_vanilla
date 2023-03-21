@@ -169,4 +169,24 @@ $(() => {
   //   .setClassToggle('.slideshow', 'visible')
   //   .addIndicators()
   //   .addTo(controller);
+
+  const videos = document.querySelectorAll('#hero-carousel video');
+  const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.8,
+  };
+  function callback(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.play();
+      } else {
+        entry.target.pause();
+      }
+    });
+  }
+  const observer = new IntersectionObserver(callback, options);
+  videos.forEach((video) => {
+    observer.observe(video);
+  });
 });
