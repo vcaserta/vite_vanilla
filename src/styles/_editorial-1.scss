@@ -40,3 +40,10 @@
     @apply text-black;
   }
 }
+
+.edit-1-side-content {
+  @apply absolute lg:z-[2] w-full lg:w-[31.5%] overflow-hidden h-full opacity-0;
+  &.active {
+    opacity: 1 !important;
+  }
+}

@@ -116,6 +116,17 @@ $(() => {
     const nextSlideActive = document.querySelectorAll(
       `[data-index="${index}"]`,
     );
+
+    const activeSideEl = document.querySelector('.edit-1-side-content.active');
+    activeSideEl.classList.remove('active');
+    const video = activeSideEl.querySelector('video');
+    if (video) video.pause();
+
+    const nextSideEl = document.querySelector(`[data-content="${index}"]`);
+    nextSideEl.classList.add('active');
+    const nextVideo = nextSideEl.querySelector('video');
+    if (nextVideo) nextVideo.play();
+
     nextSlideActive.forEach((elm) => {
       elm.classList.add('slide-active');
     });
